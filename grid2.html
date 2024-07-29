@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            position: relative;
+            top: 20px;
+            margin: 0px 50px;
+        }
+
+        #navcontent {
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+        }
+
+        #container {
+            min-height: 100vh;
+            background-image: url(https://media.idownloadblog.com/wp-content/uploads/2021/09/Apple-September-Event-California-Streaming-BasicAppleGuy-iDownloadBlog-6K-No-Logo.png);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section {
+            color: white;
+            text-align: center;
+            position: relative;
+            bottom: 50vh;
+            font-weight: 600;
+            font-size: 25px;
+        }
+
+        .card {
+           /* width: 300px;*/
+            padding: 15px;
+            font-size: 20px;
+            background-color: orange;
+            color: white;
+            border-radius: 20px;
+            animation: fade 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fade {
+            from {
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        #services {
+            display: grid;
+            gap: 50px;
+            margin: 0px 50px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+
+
+        .cover {
+            background-image: url(https://cdn.pixabay.com/photo/2024/02/15/15/46/cat-8575641_1280.jpg);
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-size: cover;
+
+            border-radius: 20px;
+        }
+
+        .cover:hover {
+            transform: scale(1.2);
+        }
+
+        .navitem::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: black;
+            display: block;
+
+        }
+
+        .navitem:hover:after {
+            width: 100%;
+        }
+
+        #gallery {
+           /* width: 300px; */
+            background-color: white;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition-duration: 5s;
+        }
+
+       
+
+
+
+        #gallery:hover {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+
+        }
+
+        .front {
+            background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-WXk_9CjYBGiJwVnwRCsjfer17fV6q215RwwHEt0P_6c1W3DwP5I7nNWiWteAbq3bboouM51JA18NOS0BlEmwvL0bfxbvK8OPDAq_tA);
+            background-size: cover;
+
+        }
+
+        .back {
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+            transform: rotateY(180deg);
+
+        }
+
+        #a {
+
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/220px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg);
+            background-size: cover;
+        }
+
+        #b {
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRt2As_lXO0ZRHN8WG3MvxBOs9SnGcF-gekx19TnzBhBorla-lAAB8VArGGj5Rx5PL745ZWpcSvSkOgaXg);
+            background-size: cover;
+        }
+
+        #c {
+
+            background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQFv2_AxXvvBEoAEYnq0sbtggDqb2x7ovhxTtose2DbTtBP2a26wqlDm6b9435uE0_kBE4sXt2JqYDHHA-DvBussVQWyQoApGWgRtvqvnI);
+            background-size: cover;
+        }
+
+        #d {
+
+            background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTF97iT30MmTzR5h1IpWtKeUkvZXxg-INU70IXEZRgd3IUa958ARvAMdaiB8HehMYx-9r6f0q0rkCb7S9YvUdCvY3KuS6y1MVLU97cDvyw);
+            background-size: cover;
+        }
+
+        #e {
+
+            background-image: url(https://documents.iplt20.com/ipl/IPLHeadshot2024/46.png);
+            background-size: cover;
+        }
+
+        #f {
+
+            background-image: url(https://documents.iplt20.com/ipl/IPLHeadshot2024/63.png);
+            background-size: cover;
+        }
+
+        #g {
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnb6eQFKiFD5e7NiHea72YqLwtiXQ8biuFIg&s);
+            background-size: cover;
+        }
+
+        #h {
+
+            background-image: url(https://documents.iplt20.com/ipl/IPLHeadshot2024/18.png);
+            background-size: cover;
+        }
+
+        #contact {
+            width: fit-content;
+            padding: 20px 80px;
+            margin: auto;
+            background-color: black;
+        }
+
+        #h1 {
+            width: fit-content;
+        }
+
+        #h1::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            background-color: green;
+        }
+
+        #img {
+            background-image: url(https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg);
+            background-size: cover;
+
+        }
+        #GalleryContainer{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+        @media only screen and (min-width:376px) and (max-width:850px){
+            #GalleryContainer, #services{
+                grid-template-columns: repeat(2,1fr);
+            }
+
+        }
+        @media only screen and (max-width:375px){
+            #GalleryContainer, #services{
+                grid-template-columns: repeat(1,1fr);
+            }
+
+        } 
+         
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="nav">
+            <div id="logo">FLEX</div>
+            <ul id="navcontent">
+                <li class="navitem"><a href="#"> Home </a></li>
+                <li class="navitem"><a href="#services"> Services </a></li>
+                <li class="navitem"><a href="#contact"> Contact </a></li>
+                <li class="navitem"><a href=""> Testimonials </a></li>
+                <li class="navitem"><a href="#gallery"> Gallery </a></li>
+            </ul>
+        </nav>
+        <section class="section">
+            <h1>This is an Basic Header</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, quidem.</p>
+        </section>
+    </div>
+    <!-- services -->
+    <section style="background-color: lightgrey">
+        <h1 style="font-size: 27px; text-align: center; padding:5px 0px;">SERVICES</h1>
+        <div id="services">
+            <div class="card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quam eius ipsum voluptas quae
+                    veritatis accusamus doloremque expedita reiciendis dolor a delectus, cum unde quod aliquam ipsa ea
+                    minus. Fugit expedita reiciendis suscipit exercitationem molestiae. Harum tempora aliquam soluta
+                    sint.</p>
+            </div>
+            <div class="card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quam eius ipsum voluptas quae
+                    veritatis accusamus doloremque expedita reiciendis dolor a delectus, cum unde quod aliquam ipsa ea
+                    minus. Fugit expedita reiciendis suscipit exercitationem molestiae. Harum tempora aliquam soluta
+                    sint.</p>
+            </div>
+            <div class="card">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quam eius ipsum voluptas quae
+                    veritatis accusamus doloremque expedita reiciendis dolor a delectus, cum unde quod aliquam ipsa ea
+                    minus. Fugit expedita reiciendis suscipit exercitationem molestiae. Harum tempora aliquam soluta
+                    sint.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery -->
+    <section style="background-color: aqua; padding: 0px 50px;">
+        <h1 style="text-align: center; font-size: 27px ">gallery</h1>
+
+        <div id="GalleryContainer">
+
+            <div id="gallery" class="m">
+                <div class="front"></div>
+                <div class="back">
+                    <h1>virat kohli</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="a"></div>
+                <div class="back">
+                    <h1>rohit sharma</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="b"></div>
+                <div class="back">
+                    <h1>hardik pandya</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="c"></div>
+                <div class="back">
+                    <h1>kl rahul</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="d"></div>
+                <div class="back">
+                    <h1>bumra</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="e"></div>
+                <div class="back">
+                    <h1>jadeja</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="f"></div>
+                <div class="back">
+                    <h1>siraj</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="g"></div>
+                <div class="back">
+                    <h1>chahal</h1>
+                </div>
+            </div>
+            <div id="gallery" class="m">
+                <div class="front" id="h"></div>
+                <div class="back">
+                    <h1>pant </h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="img" class="scale" style="background-color:gray ; ">
+        <h1 style="color: white; font-weight: bold; font-size: 40px; text-align: center;">contact us</h1>
+        <div id="contact">
+            <center>
+                <h1 id="h1" style="color: white; font-size: 25px;">contact form</h1>
+                <form action="">
+                    <input type="text" placeholder="enter name"><br><br><br><br><br>
+                    <input type="mail" placeholder="enter mail"><br><br><br><br><br>
+                    <input type="text" placeholder="message"><br><br><br>
+                    <button
+                        style="font-size: 15px; font-weight: bold; background-color:green; color: white; padding: 7px;">submit</button>
+                </form>
+            </center>
+
+        </div>
+    </section>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, harum facere, quam debitis nostrum similique, inventore laudantium unde voluptates vel deleniti laboriosam praesentium exercitationem sed! Sapiente, blanditiis consequuntur! Eius, assumenda.</p>
+
+</body>
+
+</html>
